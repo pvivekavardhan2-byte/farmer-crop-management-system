@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Farmer Crop Investment System APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Farmers",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/farmers"
+      }
+    },
+    {
+      "name": "Save Farmer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"farmerName\": \"Ramesh\",\n  \"mobileNumber\": \"9876543210\",\n  \"village\": \"Bellary\",\n  \"district\": \"Bellary\",\n  \"state\": \"Karnataka\",\n  \"landSize\": 5.5\n}"
+        },
+        "url": "http://localhost:8080/api/farmers"
+      }
+    },
+    {
+      "name": "Get Weather",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/weather/current?city=Bellary"
+      }
+    },
+    {
+      "name": "Profit Loss Report",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/reports/profit-loss"
+      }
+    }
+  ]
+}
